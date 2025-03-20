@@ -1,0 +1,171 @@
+/* Global Styles */  
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+    font-family: "Poppins", sans-serif;  
+}  
+  
+/* Body */  
+body {  
+    background-color: #0f172a;  
+    color: #fff;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    height: 100vh;  
+    padding-top: 80px;  
+}  
+  
+/* Header */  
+.header {  
+    font-size: 24px;  
+    font-weight: bold;  
+    padding: 15px;  
+    text-align: center;  
+    width: 100%;  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    background: rgba(255, 255, 255, 0.1);  
+    backdrop-filter: blur(10px);  
+    z-index: 10;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    gap: 10px;  
+}  
+
+/* Logo */  
+.logo {  
+    width: 40px;  
+    height: 40px;  
+    object-fit: contain;  
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.2));  
+}  
+
+/* Header Text */
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px; /* Ukuran lebih kecil */
+}
+
+.title {
+    font-size: 18px; /* Ukuran lebih kecil */
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 12px; /* Ukuran lebih kecil */
+    opacity: 0.8; /* Biar lebih soft */
+}
+  
+/* Card */  
+.card {  
+    background: rgba(255, 255, 255, 0.1);  
+    backdrop-filter: blur(15px);  
+    padding: 25px;  
+    border-radius: 20px; /* Sudut lebih melengkung */  
+    width: 350px;  
+    text-align: center;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  
+    margin-top: 10px;  
+  
+    /* Border dengan satu warna */  
+    border: 3px solid #00A6FF; /* Ganti warna sesuai selera */  
+}  
+  
+/* Form Elements */  
+.form-group {  
+    margin: 10px 0;  
+}  
+  
+input, select, button {  
+    width: 100%;  
+    padding: 10px;  
+    border: none;  
+    border-radius: 10px; /* Biar lebih halus */  
+    outline: none;  
+    font-size: 16px;  
+    text-align: center;  
+}  
+  
+/* Input & Select Styles */  
+input, select {  
+    background: rgba(255, 255, 255, 0.2);  
+    color: #fff;  
+    border: 2px solid transparent;  
+    transition: 0.3s;  
+}  
+
+/* Efek input focus */  
+input:focus, select:focus {  
+    border-color: #00A6FF;  
+}  
+  
+/* Placeholder warna */  
+input::placeholder {  
+    color: #ccc;  
+}  
+
+/* Styling Input Tanggal */
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    cursor: pointer;
+    appearance: none; /* Hilangkan gaya default browser */
+    
+    /* Pastikan teks berada di tengah */
+    text-align: center;
+    text-align-last: center;
+
+    /* Flexbox untuk memastikan teks sejajar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Placeholder untuk input date */
+input[type="date"]::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ccc;
+    pointer-events: none;
+}
+
+/* Hilangkan placeholder saat tanggal dipilih */
+input[type="date"]:valid::before {
+    content: "";
+}
+
+/* Tombol */  
+button {  
+    font-size: 16px;  
+    font-weight: bold;  
+    cursor: pointer;  
+    background: #00A6FF; /* Warna solid */  
+    color: #fff;  
+    transition: 0.3s;  
+    margin-top: 5px;  
+    border-radius: 10px;  
+}  
+  
+button:hover {  
+    background: #0086CC;  
+}  
+  
+button:active {  
+    transform: scale(0.95);  
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYRARA LAUNDRY</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header dengan Logo dan Subjudul -->
+    <div class="header">
+        <img src="logo.png" alt="Logo Kyrara Laundry" class="logo">
+        <div class="header-text">
+            <div class="title">KYRARA LAUNDRY</div>
+            <div class="subtitle">Perum Mutiara Biru Blok A No.17</div>
+        </div>
+    </div>
+
+    <!-- Card -->
+    <div class="card">
+        <div class="form-group">
+            <input type="text" id="name" placeholder="Nama">
+        </div>
+
+        <div class="form-group">
+            <input type="date" id="tanggal" data-placeholder="Pilih Tanggal" required>
+        </div>
+
+        <div class="form-group">
+            <select id="jenis" onchange="updateHarga()">
+                <option value="6000" selected>Pakaian - Rp6,000/kg</option>
+                <option value="4000">Seterika - Rp4,000/kg</option>
+                <option value="10000">Express - Rp10,000/kg</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input type="number" id="jumlah" placeholder="Jumlah (kg)" oninput="updateHarga()">
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="totalHarga" placeholder="Total Harga" readonly>
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="whatsapp" placeholder="Nomor WhatsApp (Opsional)" oninput="formatWhatsApp()">
+        </div>
+
+        <button id="okeBtn" onclick="submitForm()">Oke</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
