@@ -27,10 +27,18 @@
             <input type="date" id="tanggal" data-placeholder="Pilih Tanggal" required>
         </div>
 
+        <!-- Estimasi Waktu Selesai (Dipindahkan ke bawah input tanggal) -->
         <div class="form-group">
-            <select id="jenis" onchange="updateHarga()">
-                <option value="6000" selected>Pakaian - Rp6,000/kg</option>
+            <input type="text" id="estimasiWaktu" placeholder="Estimasi Waktu Selesai" readonly>
+        </div>
+
+        <div class="form-group">
+            <select id="jenis" onchange="updateHarga(); updateEstimasiWaktu();">
                 <option value="4000">Seterika - Rp4,000/kg</option>
+                <option value="5000">Cuci Lipat - Rp5,000/kg</option>
+                <option value="6000" selected>Pakaian - Rp6,000/kg</option>
+                <option value="7000">Selimut - Rp7,000/kg</option>
+                <option value="8000">Bedcover - Rp8,000/kg</option>
                 <option value="10000">Express - Rp10,000/kg</option>
             </select>
         </div>
